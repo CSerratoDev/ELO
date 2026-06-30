@@ -6,8 +6,10 @@ export default function DashboardLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <main className="min-h-screen">
-            {children}
-        </main>
+        <html lang="en">
+            <body>
+                <main className="min-h-screen">{children}<Navbar/></main>
+            </body>
+        </html>
     );
 }
