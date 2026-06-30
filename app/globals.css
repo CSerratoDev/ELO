@@ -1,26 +1,82 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --text-primary: #5C1333;
+  --primary: #f48fb1;
+  --secondary: #f8bbd0;
+  --tertiary: #fce4ec;
+  --neutral: #807477;
+  --white: #fff;
+  --navbar: #EEDFE1;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--tertiary);
+  color: var(--text-primary);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.default {
+  display: flex;
+  justify-content: center;
+}
+/*Section*/
+
+#title {
+  font-weight:bold;
+  font-size: 6rcap;
+}
+
+/*Components*/
+
+#navbar {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--navbar);
+  height: 10vh;
+  width: 100%;
+  margin: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  #navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  main {
+    padding-bottom: 80px;
+  }
+
+  nav {
+    display: flex;
+    gap: 3rem;
+  }
+}
+
+.btn-pink {
+  display: block;
+  background: var(--primary);
+  padding: 0.8rem 1.6rem;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 100%;
+}
+
+.btn-pink:hover {
+  background: var(--text-primary);
+  color: var(--primary);
+  transform: translateY(-1px);
 }
