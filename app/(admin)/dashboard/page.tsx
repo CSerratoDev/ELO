@@ -45,7 +45,7 @@ export default function Dashboard() {
                     <h1 className="title font-bold text-1xl">Transacciones Recientes</h1>
                     <Link href="/dashboard/transactions" className="title underline text-md">Ver más</Link>
                 </div>
-                <div className="separator"></div>
+                <div id="separator"></div>
                 <div className="transaction-list">
                     {transactions.map((transaction) => (
                         <article key={transaction.id} className="transaction-item">
