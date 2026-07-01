@@ -1,4 +1,4 @@
-import Navbar from "./_components/navbar";
+import Navbar from "./components/navbar";
 
 export default function DashboardLayout({
     children,
@@ -8,7 +8,7 @@ export default function DashboardLayout({
     return (
         <html lang="en">
             <body>
-                <main className="min-h-screen">{children}<Navbar/></main>
+                <main className="min-h-screen p-2">{children}<Navbar/></main>
             </body>
         </html>
     );
