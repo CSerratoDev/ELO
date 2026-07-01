@@ -25,7 +25,7 @@ body {
 /*utils*/
 
 #title {
-  font-weight:bold;
+  font-weight: bold;
   font-size: 6rcap;
 }
 
@@ -51,13 +51,49 @@ body {
 #navbar {
   display: flex;
   flex-direction: row;
-  background-color: var(--secondary);
   height: 10vh;
   width: 100%;
   margin: 0.5rem;
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  background: var(--tertiary);
+}
+
+#navbar nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+#navbar a {
+  flex: 1;
+  min-height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 0.2rem;
+  text-decoration: none;
+  color: inherit;
+
+  border-radius: 1rcap;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#navbar a:hover,
+#navbar a:focus-visible,
+#navbar a.active {
+  background: var(--primary);
+  color: var(--white);
+}
+
+#navbar span {
+  font-size: 0.75rem;
+  font-weight: 300;
+  line-height: 1;
 }
 
 @media (max-width: 768px) {
@@ -73,44 +109,7 @@ body {
   main {
     padding-bottom: 80px;
   }
-
-  #navbar nav {
-    display: flex;
-    align-items: center;
-    gap: 0;
-    justify-content: space-around;
-    width: 100%;
-  }
-
-  #navbar a {
-    flex: 1;
-    min-height: 64px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    gap: 0.2rem;
-    text-decoration: none;
-    color: inherit;
-
-    border-radius: 1rcap;
-    transition: background-color 0.2s ease, color 0.2s ease;
-  }
-
-  #navbar a:hover,
-  #navbar a:focus-visible {
-    background: var(--primary);
-    color: var(--white);
-  }
-
-  #navbar span {
-    font-size: 0.75rem;
-    font-weight: 300;
-    line-height: 1;
-  }
 }
-
 .btn-pink {
   display: block;
   background: var(--primary);
