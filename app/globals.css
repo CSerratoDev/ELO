@@ -357,7 +357,7 @@ option {
     justify-content: center;
     justify-items: center;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 1rem;
     color: var(--text-primary);
 }
 
