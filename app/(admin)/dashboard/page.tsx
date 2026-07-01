@@ -3,7 +3,7 @@ import MobileCard from "./components/MobileCard/MobileCard"
 import { BsBox2Heart } from "react-icons/bs"
 import { FaHeart } from "react-icons/fa"
 import Link from "next/link"
-import { GiTakeMyMoney } from "react-icons/gi"
+import { GiQueenCrown, GiTakeMyMoney } from "react-icons/gi"
 import { PiMoneyBold } from "react-icons/pi"
 
 const transactions = [
@@ -18,9 +18,12 @@ const transactions = [
 export default function Dashboard() {
     return (
         <section className="flex flex-col justify-evenly gap-6">
-            <div aria-label="welcome" className="relative mt-10 flex flex-col justify-center items-center text-left">
-                <h1 className="title font-bold text-4xl">¡Hola Bienvenida Amor!</h1>
-                <FaHeart size={30} className="text-pink-400 absolute right-6"/>
+            <div aria-label="welcome" className="mt-10 flex flex-col justify-center items-center text-left">
+                <h1 className="title font-bold text-4xl">¡Bienvenida Amor!</h1>
+                <div className="flex gap-2">
+                    <FaHeart size={15} className="text-pink-400"/>
+                    <GiQueenCrown size={15} className="text-pink-400"/>
+                </div>
             </div>
             <div aria-label="cards" className="flex flex-col gap-6">
                 <MobileCard
