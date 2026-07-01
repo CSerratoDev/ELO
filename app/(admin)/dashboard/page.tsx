@@ -1,8 +1,18 @@
 import { MdAttachMoney, MdFiberNew } from "react-icons/md"
 import MobileCard from "./components/MobileCard/MobileCard"
 import { BsBox2Heart } from "react-icons/bs"
-import { FaHeart } from "react-icons/fa"
+import { FaHeart, FaMoneyBillWave } from "react-icons/fa"
 import Link from "next/link"
+import { GiTakeMyMoney } from "react-icons/gi"
+
+const transactions = [
+    { id: 1, name: "Maquillaje", amount : 100, date: "2026-06-01" },
+    { id: 2, name: "Pestañas", amount : 400, date: "2026-06-04" },
+    { id: 3, name: "Uñas", amount : 500, date: "2026-06-05" },
+    { id: 4, name: "ELF", amount : 200, date: "2026-06-02" },
+    { id: 5, name: "NYX", amount : 300, date: "2026-06-03" },
+    { id: 6, name: "Labial", amount : 600, date: "2026-06-06" },
+]
 
 export default function Dashboard() {
     return (
@@ -32,12 +42,21 @@ export default function Dashboard() {
             </div>
             <article aria-label="transactions" className="h-200 bg-white p-6 rounded-2xl">
                 <div className="flex justify-between items-center">
-                    <h1 className="title font-bold text-1xl">Recent Transactions</h1>
+                    <h1 className="title font-bold text-1xl">Transacciones Recientes</h1>
                     <Link href="/dashboard/transactions" className="title underline text-md">Ver más</Link>
                 </div>
                 <div className="separator"></div>
-                <div>
-
+                <div className="transaction-list">
+                    {transactions.map((transaction) => (
+                        <article key={transaction.id} className="transaction-item">
+                            <GiTakeMyMoney size={35} className="ml-3 bg-gray-100 text-pink-400 p-0.5 rounded-full" />
+                            <div className="flex flex-col">
+                                <h4 id="subtitle">{transaction.name}</h4>
+                                <p id="date">{transaction.date}</p>
+                            </div>
+                            <p id="money">+${transaction.amount} mxn</p>
+                        </article>
+                    ))}
                 </div>
             </article>
         </section>
