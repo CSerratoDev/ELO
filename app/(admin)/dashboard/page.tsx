@@ -4,6 +4,7 @@ import { BsBox2Heart } from "react-icons/bs"
 import { FaHeart } from "react-icons/fa"
 import Link from "next/link"
 import { GiTakeMyMoney } from "react-icons/gi"
+import { PiMoneyBold } from "react-icons/pi"
 
 const transactions = [
     { id: 1, name: "Maquillaje", amount : 100, date: "2026-06-01" },
@@ -49,7 +50,7 @@ export default function Dashboard() {
                 <div className="transaction-list">
                     {transactions.map((transaction) => (
                         <article key={transaction.id} className="transaction-item">
-                            <GiTakeMyMoney size={35} className="ml-3 bg-gray-100 text-pink-400 p-0.5 rounded-full" />
+                            <PiMoneyBold size={35} className="ml-3 text-pink-400 p-0.5" />
                             <div className="flex flex-col">
                                 <h4 id="subtitle">{transaction.name}</h4>
                                 <p id="date">{transaction.date}</p>

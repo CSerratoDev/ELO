@@ -45,7 +45,7 @@ export default function Profile() {
                     <MdSecurity size={25} />
                     <h1 id="subtitle">Seguridad</h1>
                 </div>
-                <span id="mini-text">Gestiona la seguridad de tu cuenta, incluyendo la contraseña.</span>
+                <span id="mini-text">Gestiona tu contraseña mi vida.</span>
                 <form className="form-profile">
                     <label htmlFor="password">Contraseña</label>
                     <input type="password" id="password" name="password" placeholder="********"></input>
@@ -60,7 +60,7 @@ export default function Profile() {
                 </div>
                 <span id="mini-text">Gestiona tus temas e idioma corazón.</span>
                 <form className="form-profile">
-                    <label htmlFor="notifications">Tema</label>
+                    <label htmlFor="theme">Tema</label>
                     <select id="theme" name="Theme">
                         <option value="pink">Rosa Pastel</option>
                         <option value="blue">Azul Pastel</option>
