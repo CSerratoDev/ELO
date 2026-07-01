@@ -17,6 +17,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+input {
+  padding: 0.5rem;
+  border: 1px solid var(--neutral);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+select {
+  padding: 0.75rem;
+  border: 1px solid var(--neutral);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background: var(--tertiary);
+  border: none;
+  display: block;
+  text-align: left;
+}
+
+option {
+  font-size: 1rem;
+}
+
 .default {
   display: flex;
   justify-content: center;
@@ -200,4 +222,87 @@ body {
   top: 10;
   right: 10;
   color: var(--gray);
+}
+
+#edit-icon-2 {
+  position: absolute;
+  bottom: 10;
+  right: 10;
+  background: var(--gray);
+  color: var(--text-primary);
+  border-radius: 50%;
+  padding: 0.25rem;
+
+  cursor: pointer;
+}
+
+#profile-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: var(--white);
+}
+
+#profile-info {
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  gap: 0.25rem;
+
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#profile-info h2 {
+  font-weight: bold;
+  font-size: 1.5rcap;
+  color: var(--text-primary);
+}
+
+.profile-img {
+  object-position: top center;
+  object-fit: cover;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 20%;
+  overflow: hidden;
+  background: var(--text-primary);
+}
+
+.form-profile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.form-profile input {
+  background: var(--tertiary);
+  color: var(--black);
+  padding: 0.8rem;
+  border: none;
+}
+
+.form-profile input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--primary);
+}
+
+.form-profile label {
+  font-weight: bold;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  color: var(--text-primary);
 }

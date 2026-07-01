@@ -1,7 +1,7 @@
 import { MdAttachMoney, MdFiberNew } from "react-icons/md"
 import MobileCard from "./components/MobileCard/MobileCard"
 import { BsBox2Heart } from "react-icons/bs"
-import { FaHeart, FaMoneyBillWave } from "react-icons/fa"
+import { FaHeart } from "react-icons/fa"
 import Link from "next/link"
 import { GiTakeMyMoney } from "react-icons/gi"
 
